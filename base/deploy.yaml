@@ -19,6 +19,10 @@ spec:
         - name: content
           mountPath: /usr/share/nginx/html
           readOnly: true
+      - name: hello-world
+        image: gcr.io/google-samples/node-hello:1.0
+        ports:
+        - containerPort: 8080
       volumes:
       - name: content
         configMap:
